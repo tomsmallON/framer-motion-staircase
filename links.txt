@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=WwiCsORjiyk
+https://motion.dev/docs/react-animate-presence
+https://motion.dev/docs/react-motion-component
+https://motion.dev/docs/react-use-scroll
+https://motion.dev/docs/react-use-transform

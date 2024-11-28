@@ -1,0 +1,44 @@
+.steps {
+  --fs: 14vmin;
+  --lh: 1;
+  --r: 22.5deg;
+  --crop-y: calc(var(--fs) * -0.04);
+
+  position: sticky;
+  top: calc(var(--nav-height) + var(--fs));
+  font-size: var(--fs);
+  line-height: var(--lh);
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin-top: calc(var(--fs) * 0.5);
+  margin-left: calc(var(--fs) * -1);
+  transform: skew(0, calc(var(--r) * -1)) rotateY(var(--r));
+}
+
+.step {
+  --x: calc(var(--step) * (var(--fs) / 2));
+
+  overflow: hidden;
+  height: calc(var(--fs) * var(--lh));
+
+  &:nth-child(odd) {
+    transform: rotate3d(-1, 0, 0, calc(var(--r) * 1)) skew(45deg, 0deg)
+      translateX(var(--x));
+  }
+
+  &:nth-child(even) {
+    transform: translateX(var(--x));
+    opacity: 0.5;
+  }
+
+  margin-block: var(--crop-y);
+}
+
+.content {
+  & > span {
+    display: block;
+    transform: translateY(calc(var(--step) * -100%));
+  }
+}
